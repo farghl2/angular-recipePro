@@ -1,0 +1,12 @@
+.mat-mdc-card {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 8px;
+
+  cursor: pointer;
+}
+
+

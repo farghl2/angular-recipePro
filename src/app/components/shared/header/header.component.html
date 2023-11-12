@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class=" m-auto container justify-between">
+    <div class=" flex justify-between w-[30%]">
+      <a class="text-[1.5rem]">Logo</a>
+      <ul class="flex">
+        <li class="ml-5">
+          <a>Shoppin List</a>
+        </li>
+        <li class="ml-5">
+          <a>Recipes</a>
+        </li>
+      </ul>
+    </div>
+    <div class="w-[20%] ">
+      <button  mat-button color="link" [matMenuTriggerFor]="menu">
+        Manage<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-menu #menu>
+  <button mat-menu-item>Save Data</button>
+  <button mat-menu-item>Fetch Data</button>
+</mat-menu>

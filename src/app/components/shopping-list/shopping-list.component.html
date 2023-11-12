@@ -1,0 +1,8 @@
+
+<div class="container p-5">
+  <app-shopping-edit></app-shopping-edit>
+  <mat-card *ngFor="let i of ingredients" class="p-4 w-[70%] mb-2 cursor-pointer">
+    {{i.name}} ({{i.amount}})
+  </mat-card>
+
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TelegramService } from './services/telegram.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { TelegramService } from './services/telegram.service';
 export class AppComponent {
   deferredPrompt: any;
 
-  constructor(private tl:TelegramService) { }
+  constructor() { }
 
 
 
@@ -46,9 +46,5 @@ export class AppComponent {
   //   }
   // }
 
-  sendMessage(){
-    this.tl.sendMessage('islam').subscribe(res=>{
-      console.log(res);
-    })
-  }
+
 }

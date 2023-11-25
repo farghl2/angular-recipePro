@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShoppingListService } from 'src/app/services/shopping-list.service';
 
 
 @Component({
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./shopping-edit.component.css']
 })
 export class ShoppingEditComponent {
+
+  constructor(private shopingListService: ShoppingListService){}
+
+
+  addIngredient(form:any){
+    this.shopingListService.addIngriednt({name:form.value.name, amount: form.value.amount});
+  }
 
 }

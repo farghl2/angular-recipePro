@@ -3,15 +3,15 @@
     <div class="flex gap-2">
       <mat-form-field>
         <mat-label>Name</mat-label>
-        <input matInput>
+        <input matInput ngModel name="name">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Amount</mat-label>
-        <input matInput>
+        <input matInput ngModel name="amount">
       </mat-form-field>
     </div>
     <div class="flex gap-2 mb-3">
-      <button color="primary" mat-raised-button>Add</button>
+      <button color="primary" mat-raised-button (click)="addIngredient(myform)">Add</button>
       <button color="warn" mat-raised-button>Delete</button>
       <button color="accent" mat-raised-button>Clear</button>
     </div>

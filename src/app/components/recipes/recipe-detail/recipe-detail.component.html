@@ -1,9 +1,18 @@
 <div class="p-4">
-  <h1 class="font-bold">Recipe Name</h1>
-  <button mat-raised-button color="accent" [matMenuTriggerFor]="manageMenu"><mat-icon>arrow_drop_down</mat-icon>Manage Recipe</button>
-  <div class="mt-2 p-2 ">Description</div>
+  <h1 class="font-bold">{{recipeDetails?.name}}</h1>
+  <img src="{{recipeDetails?.imagePath}}"  class="w-[300px] m-3" alt="">
+  <button *ngIf="recipeDetails" mat-raised-button color="accent" [matMenuTriggerFor]="manageMenu"><mat-icon>arrow_drop_down</mat-icon>Manage Recipe</button>
+  <div class="mt-2 p-2 ">{{recipeDetails?.description}}</div>
+  <ul *ngFor="let ing of recipeDetails?.ingredeints">
+  <li>{{ing.name}} ({{ing.amount}})</li>
+  </ul>
 </div>
 
+
+
 <mat-menu #manageMenu>
+  <button mat-menu-item (click)="addIngredientsToShoppinList(recipeDetails?.ingredeints)"> To shopping lis</button>
+  <button mat-menu-item>Edit Recipe</button>
+  <button mat-menu-item>Delete Recipe</button>
 
 </mat-menu>
